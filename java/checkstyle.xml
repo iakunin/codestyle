@@ -200,6 +200,7 @@
         <module name="NestedForDepth"/>
         <module name="NestedIfDepth"/>
         <module name="NestedTryDepth"/>
+        <module name="UnnecessarySemicolonInTryWithResources"/>
         <module name="NoClone"/>
         <module name="NoFinalizer"/>
         <module name="SuperClone"/>
@@ -239,8 +240,6 @@
         <module name="JavadocType">
             <property name="allowUnknownTags" value="true"/>
         </module>
-        <module name="JavadocMethod"/>
-        <module name="JavadocVariable"/>
         <module name="JavadocStyle"/>
         <module name="AtclauseOrder">
             <property name="tagOrder"
@@ -250,6 +249,7 @@
         <module name="NonEmptyAtclauseDescription"/>
         <module name="JavadocTagContinuationIndentation"/>
         <module name="JavadocParagraph"/>
+        <module name="JavadocContentLocation"/>
         <module name="SingleLineJavadoc">
             <property name="ignoreInlineTags" value="false"/>
         </module>
@@ -257,11 +257,6 @@
         <module name="BooleanExpressionComplexity"/>
         <module name="ClassDataAbstractionCoupling"/>
         <module name="ClassFanOutComplexity">
-            <!--
-                  Total number of classes that a particular class
-                  depends on. We're increasing this value because
-                  default "20" is too low.
-                  -->
             <property name="max" value="30"/>
         </module>
         <module name="CyclomaticComplexity"/>
@@ -289,7 +284,6 @@
             <property name="allowedAbbreviationLength" value="1"/>
         </module>
         <module name="OverloadMethodsDeclarationOrder"/>
-        <module name="ClassTypeParameterName"/>
         <module name="ConstantName"/>
         <module name="LocalFinalVariableName">
             <property name="format" value="^(id|[a-z]{3,12})$"/>
@@ -307,6 +301,8 @@
         <module name="MethodName">
             <property name="format" value="^[a-z]{2,}[a-zA-Z]+$"/>
         </module>
+        <module name="ClassTypeParameterName"/>
+        <module name="InterfaceTypeParameterName"/>
         <module name="MethodTypeParameterName"/>
         <module name="PackageName">
             <property name="format" value="^[a-z]+(\.[a-z][a-z0-9]*)*$"/>
