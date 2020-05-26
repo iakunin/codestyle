@@ -11,35 +11,15 @@
     <property name="localeLanguage" value="en"/>
     <property name="charset" value="UTF-8"/>
     <property name="severity" value="warning"/>
-    <!--
-      Checks that each Java package has a Javadoc file
-      used for commenting.
-      -->
-    <module name="JavadocPackage"/>
-    <!--
-      Checks whether files end with a new line.
-      -->
     <module name="NewlineAtEndOfFile">
         <property name="fileExtensions" value="java"/>
         <property name="lineSeparator" value="lf"/>
     </module>
-    <!--
-      Checks that property files contain the same keys.
-      -->
     <module name="Translation"/>
-    <!-- Checks for duplicate code -->
-    <!-- https://sourceforge.net/p/checkstyle/bugs/693/ -->
-    <!-- <module name="StrictDuplicateCode"/> -->
-    <!--
-      Maximum number of lines in any .java file is limited.
-      -->
     <module name="FileLength">
         <property name="max" value="1000"/>
         <property name="fileExtensions" value="java"/>
     </module>
-    <!--
-      TAB chars are not allowed anywhere.
-      -->
     <module name="FileTabCharacter">
         <property name="eachLine" value="true"/>
         <property name="fileExtensions"
@@ -50,23 +30,14 @@
         <property name="max" value="100"/>
         <property name="ignorePattern" value="^import .*$|^\s+\*\s.*https?:\/\/.+"/>
     </module>
-    <!--
-      Trailing spaces are not allowed anywhere.
-      -->
     <module name="RegexpSingleline">
         <property name="format" value="\s+$"/>
-        <property name="message" value="Line has trailing spaces."/>
+        <property name="message" value="Line has trailing spaces"/>
     </module>
-    <!--
-      Windows line endings are not allowed.
-      -->
     <module name="RegexpMultiline">
         <property name="format" value="\r\n$"/>
         <property name="message" value="Lines in file should end with Unix-like end of line"/>
     </module>
-    <!--
-      Two consecutive empty lines are not allowed.
-      -->
     <module name="RegexpMultiline">
         <property name="format" value="\r?\n[ \t\x0B\f]*\r?\n[ \t\x0B\f]*\r?\n"/>
         <property name="fileExtensions" value="java"/>
@@ -134,7 +105,6 @@
             value="Line cannot start with this symbol, move it to the previous line"/>
     </module>
     <module name="TreeWalker">
-        <!--        <property name="cacheFile" value="${cache.file}"/>-->
         <module name="SuppressWithNearbyCommentFilter">
             <property name="commentFormat" value="@checkstyle (\w+) \((\d+) lines?\)"/>
             <property name="checkFormat" value="$1"/>
@@ -162,13 +132,20 @@
         <module name="InterfaceIsType"/>
         <module name="HideUtilityClassConstructor"/>
         <module name="DesignForExtension"/>
+        <module name="AbstractClassName"/>
         <module name="MutableException"/>
         <module name="ThrowsCount"/>
         <module name="InnerTypeLast"/>
         <!-- Checks for common coding problems -->
         <module name="ArrayTrailingComma"/>
+        <module name="AvoidDoubleBraceInitialization"/>
+        <module name="UnnecessarySemicolonInEnumeration"/>
+        <module name="UnnecessarySemicolonAfterOuterTypeDeclaration"/>
+        <module name="UnnecessarySemicolonInTryWithResources"/>
+        <module name="UnnecessarySemicolonAfterTypeMemberDeclaration"/>
         <module name="AvoidInlineConditionals"/>
         <module name="CovariantEquals"/>
+        <module name="EqualsAvoidNull"/>
         <module name="EmptyStatement"/>
         <module name="EqualsHashCode"/>
         <module name="FinalLocalVariable"/>
@@ -177,7 +154,7 @@
         </module>
         <module name="IllegalInstantiation"/>
         <module name="IllegalToken">
-            <property name="tokens" value="POST_INC, POST_DEC"/>
+            <property name="tokens" value="POST_INC, POST_DEC, LABELED_STAT"/>
         </module>
         <module name="IllegalTokenText">
             <property name="tokens" value="STRING_LITERAL, CHAR_LITERAL"/>
@@ -197,20 +174,17 @@
         <module name="SimplifyBooleanExpression"/>
         <module name="SimplifyBooleanReturn"/>
         <module name="StringLiteralEquality"/>
+        <module name="MultipleStringLiterals"/>
         <module name="NestedForDepth"/>
         <module name="NestedIfDepth"/>
         <module name="NestedTryDepth"/>
-        <module name="UnnecessarySemicolonInTryWithResources"/>
         <module name="NoClone"/>
         <module name="NoFinalizer"/>
         <module name="SuperClone"/>
         <module name="SuperFinalize"/>
         <module name="IllegalCatch"/>
-        <module name="EmptyCatchBlock">
-            <property name="commentFormat" value="_"/>
-        </module>
+        <module name="EmptyCatchBlock"/>
         <module name="IllegalThrows"/>
-        <module name="PackageDeclaration"/>
         <module name="ReturnCount">
             <property name="max" value="1"/>
         </module>
@@ -234,6 +208,7 @@
         <module name="AvoidStaticImport"/>
         <module name="IllegalImport"/>
         <module name="RedundantImport"/>
+        <module name="UnusedImports"/>
         <module name="ImportOrder"/>
         <module name="NoLineWrap"/>
         <!-- Checks for Javadoc comments. -->
@@ -249,6 +224,7 @@
         <module name="NonEmptyAtclauseDescription"/>
         <module name="JavadocTagContinuationIndentation"/>
         <module name="JavadocParagraph"/>
+        <module name="InvalidJavadocPosition"/>
         <module name="JavadocContentLocation"/>
         <module name="SingleLineJavadoc">
             <property name="ignoreInlineTags" value="false"/>
@@ -264,6 +240,8 @@
         <module name="JavaNCSS"/>
         <!-- Miscellaneous other checks. -->
         <module name="TodoComment"/>
+        <module name="OrderedProperties"/>
+        <module name="UniqueProperties"/>
         <module name="UpperEll"/>
         <module name="ArrayTypeStyle"/>
         <module name="FinalParameters">
@@ -277,7 +255,7 @@
         <module name="ModifierOrder"/>
         <module name="RedundantModifier"/>
         <!-- Checks for Naming Conventions. -->
-        <module name="AbbreviationAsWordInNameCheck">
+        <module name="AbbreviationAsWordInName">
             <property name="ignoreFinal" value="false"/>
             <property name="ignoreStatic" value="false"/>
             <property name="allowedAbbreviations" value="IT"/>
@@ -303,6 +281,7 @@
         </module>
         <module name="ClassTypeParameterName"/>
         <module name="InterfaceTypeParameterName"/>
+        <module name="LambdaParameterName"/>
         <module name="MethodTypeParameterName"/>
         <module name="PackageName">
             <property name="format" value="^[a-z]+(\.[a-z][a-z0-9]*)*$"/>
@@ -327,6 +306,7 @@
         <module name="MethodCount"/>
         <!-- Checks for whitespace. -->
         <module name="GenericWhitespace"/>
+        <module name="SingleSpaceSeparator"/>
         <module name="EmptyForInitializerPad"/>
         <module name="EmptyForIteratorPad"/>
         <module name="MethodParamPad"/>
@@ -342,8 +322,7 @@
             <property name="allowMultipleEmptyLines" value="false"/>
             <property name="allowMultipleEmptyLinesInsideClassMembers" value="false"/>
             <property name="tokens"
-                value="IMPORT,CLASS_DEF,INTERFACE_DEF,ENUM_DEF,
-                STATIC_INIT,INSTANCE_INIT,METHOD_DEF,CTOR_DEF,VARIABLE_DEF"/>
+                value="IMPORT,CLASS_DEF,INTERFACE_DEF,ENUM_DEF, STATIC_INIT,INSTANCE_INIT,METHOD_DEF,CTOR_DEF,VARIABLE_DEF"/>
         </module>
         <module name="SeparatorWrap">
             <property name="tokens" value="DOT"/>
