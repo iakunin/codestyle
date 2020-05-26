@@ -450,8 +450,12 @@
             <parameters>
                 <parameter>
                     <key>exceptions</key>
-                    <value>java.lang.InterruptedException, java.lang.NumberFormatException,
-                        java.lang.NoSuchMethodException, java.text.ParseException, java.net.MalformedURLException,
+                    <value>
+                        java.lang.InterruptedException,
+                        java.lang.NumberFormatException,
+                        java.lang.NoSuchMethodException,
+                        java.text.ParseException,
+                        java.net.MalformedURLException,
                         java.time.format.DateTimeParseException
                     </value>
                 </parameter>
