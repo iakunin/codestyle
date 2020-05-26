@@ -1,0 +1,4 @@
+--verbose
+--source=.
+--exclude=.idea/**/*
+--file=/dev/null

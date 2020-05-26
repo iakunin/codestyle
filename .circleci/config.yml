@@ -1,0 +1,14 @@
+version: 2.1
+jobs:
+    pdd:
+        docker:
+            -   image: iakunin/pdd:0.20.5
+        steps:
+            - checkout
+            -   run:
+                    name: validate pdd
+                    command: pdd && echo OK
+workflows:
+    main:
+        jobs:
+            - pdd
