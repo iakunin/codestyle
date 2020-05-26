@@ -240,8 +240,6 @@
         <module name="JavaNCSS"/>
         <!-- Miscellaneous other checks. -->
         <module name="TodoComment"/>
-        <module name="OrderedProperties"/>
-        <module name="UniqueProperties"/>
         <module name="UpperEll"/>
         <module name="ArrayTypeStyle"/>
         <module name="FinalParameters">
@@ -338,4 +336,6 @@
         <property name="message" value="ArrayList should be initialized with a size parameter"/>
         <property name="fileExtensions" value="java"/>
     </module>
+    <module name="OrderedProperties"/>
+    <module name="UniqueProperties"/>
 </module>
