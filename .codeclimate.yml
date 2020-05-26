@@ -7,6 +7,9 @@ plugins:
         enabled: true
         issue_override:
             severity: minor
+    checkstyle:
+        enabled: true
+        config: 'java/checkstyle.xml'
 
 exclude_patterns:
     - "/.idea/"
