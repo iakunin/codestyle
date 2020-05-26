@@ -245,7 +245,7 @@
         <module name="AtclauseOrder">
             <property name="tagOrder"
                 value="@param, @return, @throws, @exception, @see, @since, @serial, @serialField,
-                @serialData, @deprecated, @todo, @checkstyle"/>
+                @serialData, @deprecated, @checkstyle"/>
         </module>
         <module name="NonEmptyAtclauseDescription"/>
         <module name="JavadocTagContinuationIndentation"/>
