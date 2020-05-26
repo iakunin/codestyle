@@ -1,2 +1,3 @@
-# code-style
-Common settings for code style tools
+# codestyle
+
+Common settings for various code style tools.
