@@ -1,0 +1,12 @@
+plugins:
+    markdownlint:
+        enabled: true
+        issue_override:
+            severity: minor
+    editorconfig:
+        enabled: true
+        issue_override:
+            severity: minor
+
+exclude_patterns:
+    - "/.idea/"
