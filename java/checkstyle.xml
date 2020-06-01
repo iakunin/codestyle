@@ -131,7 +131,6 @@
         <module name="UnnecessarySemicolonAfterOuterTypeDeclaration"/>
         <module name="UnnecessarySemicolonInTryWithResources"/>
         <module name="UnnecessarySemicolonAfterTypeMemberDeclaration"/>
-        <module name="AvoidInlineConditionals"/>
         <module name="CovariantEquals"/>
         <module name="EqualsAvoidNull"/>
         <module name="EmptyStatement"/>
