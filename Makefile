@@ -11,3 +11,6 @@ pdd:
 	--volume=${PWD}:/main \
 	--rm iakunin/pdd:0.20.5 \
 	pdd
+
+codeclimate:
+	codeclimate analyze
