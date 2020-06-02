@@ -55,7 +55,7 @@
             <parameters>
                 <parameter>
                     <key>maximumLineLength</key>
-                    <value>80</value>
+                    <value>100</value>
                 </parameter>
             </parameters>
         </rule>
@@ -139,7 +139,7 @@
             <parameters>
                 <parameter>
                     <key>Authorized numbers</key>
-                    <value>-1,0,1</value>
+                    <value>-1,0,1,2</value>
                 </parameter>
             </parameters>
         </rule>
@@ -163,12 +163,6 @@
         <rule>
             <repositoryKey>java</repositoryKey>
             <key>S1105</key>
-            <priority>MINOR</priority>
-            <parameters/>
-        </rule>
-        <rule>
-            <repositoryKey>java</repositoryKey>
-            <key>S1106</key>
             <priority>MINOR</priority>
             <parameters/>
         </rule>
@@ -422,12 +416,6 @@
         <rule>
             <repositoryKey>java</repositoryKey>
             <key>S1161</key>
-            <priority>MAJOR</priority>
-            <parameters/>
-        </rule>
-        <rule>
-            <repositoryKey>java</repositoryKey>
-            <key>S1162</key>
             <priority>MAJOR</priority>
             <parameters/>
         </rule>
@@ -1013,12 +1001,6 @@
             <repositoryKey>java</repositoryKey>
             <key>S1699</key>
             <priority>CRITICAL</priority>
-            <parameters/>
-        </rule>
-        <rule>
-            <repositoryKey>java</repositoryKey>
-            <key>S1700</key>
-            <priority>MAJOR</priority>
             <parameters/>
         </rule>
         <rule>
@@ -3092,7 +3074,7 @@
             <parameters>
                 <parameter>
                     <key>Max</key>
-                    <value>10</value>
+                    <value>15</value>
                 </parameter>
             </parameters>
         </rule>
