@@ -714,12 +714,6 @@
         </rule>
         <rule>
             <repositoryKey>java</repositoryKey>
-            <key>S1258</key>
-            <priority>MAJOR</priority>
-            <parameters/>
-        </rule>
-        <rule>
-            <repositoryKey>java</repositoryKey>
             <key>S126</key>
             <priority>CRITICAL</priority>
             <parameters/>
